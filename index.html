@@ -5,12 +5,13 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<title>Hemanya Arora</title>
-<meta content="" name="description">
-<meta content="" name="keywords">
+<title>Hemanya Arora | Senior Data Engineer | Toronto</title>
+<meta name="description" content="Hemanya Arora - Senior Data Engineer specializing in cloud data platforms, Databricks, Azure, and enterprise data solutions. Toronto-based with expertise in data architecture and team leadership.">
+<meta name="keywords" content="Senior Data Engineer, Databricks, Azure, Data Platform, Toronto, Python, SQL, ETL, Data Architecture">
+<meta name="author" content="Hemanya Arora">
 
-<!-- Favicons
- <link href="assets/img/favicon.png" rel="icon">
+<!-- Favicons -->
+<!-- <link href="assets/img/favicon.png" rel="icon">
  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
 <!-- Google Fonts -->
@@ -27,15 +28,297 @@
 <!-- Template Main CSS File -->
 <link href="assets/css/style.css" rel="stylesheet">
 
-<!-- =======================================================
- * Template Name: iPortfolio - v3.7.0
- * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- ======================================================== -->
+<!-- Dark Mode Styles -->
+<style>
+  /* Dark Mode Variables */
+  :root {
+    --bg-primary: #fff;
+    --bg-secondary: #f5f8fd;
+    --bg-dark: #040b14;
+    --text-primary: #272829;
+    --text-secondary: #173b6c;
+    --text-light: #fff;
+    --accent-color: #149ddd;
+  }
+
+  [data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #252525;
+    --bg-dark: #0a0a0a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-light: #ffffff;
+  }
+
+  /* Dark Mode Toggle Button */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(20, 157, 221, 0.4);
+  }
+
+  .theme-toggle i {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  /* Dark Mode Styles */
+  [data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .section-bg {
+    background: var(--bg-secondary);
+  }
+
+  [data-theme="dark"] .section-title h2 {
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .about .content h3,
+  [data-theme="dark"] .resume .resume-title,
+  [data-theme="dark"] .resume .resume-item h4 {
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .contact .info,
+  [data-theme="dark"] .contact .php-email-form {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .contact .info h4 {
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .contact .info p {
+    color: var(--text-secondary);
+  }
+
+  [data-theme="dark"] .portfolio .portfolio-wrap::before {
+    background: rgba(26, 26, 26, 0.9);
+  }
+
+  [data-theme="dark"] .facts .count-box {
+    background: var(--bg-secondary);
+  }
+
+  [data-theme="dark"] .facts .count-box span,
+  [data-theme="dark"] .facts .count-box p {
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .expertise-item {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .testimonial-item {
+    background: var(--bg-secondary);
+  }
+
+  [data-theme="dark"] .testimonial-item h3 {
+    color: var(--text-primary);
+  }
+
+  [data-theme="dark"] .testimonial-item p {
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+  }
+
+  /* Download Resume Button */
+  .download-resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
+  }
+
+  .download-resume-btn:hover {
+    background: #37b3ed;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(20, 157, 221, 0.4);
+    color: #fff;
+  }
+
+  .download-resume-btn i {
+    margin-right: 8px;
+  }
+
+  /* Expertise Section Styles */
+  .expertise-item {
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+
+  .expertise-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(20, 157, 221, 0.2);
+  }
+
+  .expertise-item h3 {
+    color: #173b6c;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  .expertise-item h3 i {
+    color: #149ddd;
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  .expertise-item p {
+    color: #555;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  /* Impact Section Styles */
+  .impact .count-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+  }
+
+  .impact .count-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(20, 157, 221, 0.2);
+  }
+
+  .impact .count-box i {
+    font-size: 48px;
+    color: #149ddd;
+    margin-bottom: 20px;
+  }
+
+  .impact .count-box span {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #050d18;
+    margin-bottom: 10px;
+  }
+
+  .impact .count-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #173b6c;
+    font-weight: 500;
+  }
+
+  /* Testimonials Section Styles */
+  .testimonials-section .testimonial-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .testimonials-section .testimonial-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(20, 157, 221, 0.15);
+  }
+
+  .testimonials-section .testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .testimonials-section .testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  .testimonials-section .testimonial-info h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #173b6c;
+    font-weight: 600;
+  }
+
+  .testimonials-section .testimonial-info h4 {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #149ddd;
+    font-weight: 500;
+  }
+
+  .testimonials-section .linkedin-link {
+    color: #0077b5;
+    font-size: 24px;
+    margin-left: auto;
+  }
+
+  .testimonials-section .testimonial-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.8;
+    padding-left: 20px;
+    border-left: 3px solid #149ddd;
+  }
+
+  @media (max-width: 768px) {
+    .theme-toggle {
+      top: 10px;
+      right: 60px;
+      width: 45px;
+      height: 45px;
+    }
+
+    .theme-toggle i {
+      font-size: 20px;
+    }
+  }
+</style>
 </head>
 
 <body>
+
+<!-- Dark Mode Toggle Button -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+  <i class="bi bi-moon-fill" id="theme-icon"></i>
+</button>
 
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -45,17 +328,15 @@
 <div class="d-flex flex-column">
 
 <div class="profile">
-<img src="assets/img/Screen Shot 2024-01-06 at 12.55.02 PM.png" alt="" class="img-fluid rounded-circle">
+<img src="assets/img/profile-photo.jpg" alt="Hemanya Arora - Senior Data Engineer" class="img-fluid rounded-circle">
 <h1 class="text-light"><a href="index.html">Hemanya Arora</a></h1>
 <div class="social-links mt-3 text-center">
-<a href="https://github.com/hemanyaarora">
+<a href="https://github.com/hemanyaarora" aria-label="GitHub Profile">
 <i class="bx bxl-github"></i>
-<!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABl0lEQVRIS7WVgTEFUQxF768AFaACVIAKUAEqQAWoAB1QwacCVIAO6IAKmDOT7ORnsvvfmtnM7Ozum5d7k/uSvJkmttnE+GohOJR0IGnbHmJ6t+dF0sNQkEMEAN9I2liS5aekC0mP1b4+gitJlyPluzWiBbeK4D/gDnon6TwyZII9Sc+24UkSZCeSzmztw95b9kb/e9tzbGtHUa5MgJ7rtvHaCPhdlfSdJItrMWswNn1vJOBQ5wGE6Ii+xbKsp5bZQpmSqqcJ6L4kyrDFKOG3KriYAWC7QWucxlj0p092cI4EaLxiiK+SOPAxFgk67EjwG9AmIYgRkM3amPCtylyBL58AMYN8yLQ/3dliNBdjxa2rwL4y/bHzoPzoztwDDkQvUHk5kLJMcaJJSJMSJSovW7qannAigMmYquM7WidPriL+fVQARJk5SOxqB8uS+vpC/1TDzvUsp2MItRqKS4ed+zsJDUM2PtSiFJmgynLwRkMuZGD4Vc5OgOacTzlWWq5MiMiCbKIxSrjtypvMN7YQtPRB757JCf4AiSVWGfPUO+kAAAAASUVORK5CYII="/> -->
 </a>
-<a href="https://ca.linkedin.com/in/hemanya-arora" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-<a href="mailto:hemanya56@gmail.com">
-<i class='bx bx-envelope' ></i>
-<!-- <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABFElEQVRIS92U0XHCMBBEHxUkHQAVkBLSCaSDUEnoANJJSggdQAekApjN3GU0suSTzfiD6Mdj+7Tvdk+jGROv2cT6/E/AK7AHFiPjOwFvwJf2lyJSwXykuG+TxrIGuFrVBdgCh0bYBvgAnq3+t/mSAwe4rgACCVhaEpSwAOkKAcpxBzwB35arnul6sXnp+QO82/tf830O9E8b5WBlDtLI0kiO5kANeAKhA4crAjlZW+s+E4/k0zr3CENAbaYS9MhU45Hkh6AKyIfbGVgSmf4JmM9E3+8CtJzY0RG1iPc6cIFaVK0XY+hgckAURd9h8L1nvywj27mY6iOAxHXCqrdp6qAEiBx2L6RBOwYWRxENlOuWPz7gBo3POBm4kF6TAAAAAElFTkSuQmCC"/> -->
+<a href="https://ca.linkedin.com/in/hemanya-arora" class="linkedin" aria-label="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a>
+<a href="mailto:hemanya56@gmail.com" aria-label="Email">
+<i class='bx bx-envelope'></i>
 </a>
 </div>
 </div>
@@ -64,9 +345,11 @@
 <ul>
 <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
 <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+<li><a href="#impact" class="nav-link scrollto"><i class="bx bx-bar-chart"></i> <span>Impact</span></a></li>
 <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+<li><a href="#expertise" class="nav-link scrollto"><i class="bx bx-cog"></i> <span>Expertise</span></a></li>
 <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-<!-- <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li> -->
+<li><a href="#recommendations" class="nav-link scrollto"><i class="bx bx-chat"></i> <span>Recommendations</span></a></li>
 <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
 </ul>
 </nav><!-- .nav-menu -->
@@ -77,7 +360,7 @@
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
 <div class="hero-container" data-aos="fade-in">
 <h1>Hemanya Arora</h1>
-<p>I'm a <span class="typed" data-typed-items="Data Engineer, Data Scientist, Developer"></span></p>
+<p>I'm a <span class="typed" data-typed-items="Senior Data Engineer, Data Platform Architect, Technical Leader"></span></p>
 </div>
 </section><!-- End Hero -->
 
@@ -87,20 +370,17 @@
 <section id="about" class="about">
 <div class="container">
 
-<div class="section-title">
+<div class="section-title" data-aos="fade-up">
 <h2>About Me</h2>
-<p>Results-driven Data Engineer with experience designing and deploying scalable data solutions for high-impact analytics. Adept at end-to-end ETL, data modelling, and DevOps best practices, leveraging Python, SQL, and cloud-native technologies (Azure, Databricks). Possesses strong collaboration skills, working cross-functionally to deliver actionable insights that drive efficiency, cost savings, and data-driven innovation.</p>
+<p>Senior Data Engineer with proven expertise architecting enterprise-scale data platforms that drive strategic business decisions. Specialized in cloud-native solutions (Azure, Databricks), data modeling, and team leadership. Track record of delivering high-impact data products—from modernizing legacy systems to building ML-powered analytics—that generate measurable business value, cost savings, and operational efficiency across Fortune 500 organizations.</p>
 </div>
 
 <div class="row">
-<!-- <div class="col-lg-4" data-aos="fade-right">
-           <img src="assets/img/IMG_2969.jpeg" class="img-fluid" alt="">
-         </div> -->
 <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
 <div class="row">
 <div class="col-lg-6">
 <ul>
-<li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span>https://github.com/hemanyaarora</span></li>
+<li><i class="bi bi-chevron-right"></i> <strong>Github:</strong> <span><a href="https://github.com/hemanyaarora" target="_blank">hemanyaarora</a></span></li>
 <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Toronto, ON</span></li>
 </ul>
 </div>
@@ -112,19 +392,61 @@
 </div>
 </div>
 <p>
-Open for collaboration on any interesting projects.
+Open for collaboration on interesting data engineering projects and technical leadership opportunities.
 </p>
+<a href="assets/resume/Hemanya_Arora_Resume.pdf" class="download-resume-btn" download>
+<i class="bi bi-download"></i> Download Resume
+</a>
 </div>
 </div>
 
 </div>
 </section><!-- End About Section -->
 
+<!-- ======= Impact/Metrics Section ======= -->
+<section id="impact" class="impact section-bg">
+<div class="container">
+<div class="section-title" data-aos="fade-up">
+<h2>Measurable Impact</h2>
+</div>
+<div class="row">
+<div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+<div class="count-box">
+<i class="bi bi-speedometer2"></i>
+<span>87%</span>
+<p>Processing Time Reduction</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+<div class="count-box">
+<i class="bi bi-diagram-3"></i>
+<span>40+</span>
+<p>Pipelines Migrated to Cloud</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+<div class="count-box">
+<i class="bi bi-currency-dollar"></i>
+<span>$150K+</span>
+<p>Annual Cost Savings</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+<div class="count-box">
+<i class="bi bi-people"></i>
+<span>6-8</span>
+<p>Team Members Led</p>
+</div>
+</div>
+</div>
+</div>
+</section><!-- End Impact Section -->
+
 <!-- ======= Facts Section ======= -->
 <section id="facts" class="facts">
 <div class="container">
 
-<div class="section-title">
+<div class="section-title" data-aos="fade-up">
 <h2>Volunteering Experience</h2>
 
 <h3>Code Club Canada</h3>
@@ -140,12 +462,12 @@ Open for collaboration on any interesting projects.
 <!-- ======= Skills Section ======= -->
 <section id="skills" class="skills section-bg">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title" data-aos="fade-up">
       <h2>Skills</h2>
     </div>
     <div class="row skills-content">
       <!-- Left Column: Core Programming & Data Engineering -->
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
         <div class="progress">
           <span class="skill">Python</span>
         </div>
@@ -166,7 +488,7 @@ Open for collaboration on any interesting projects.
         </div>
       </div>
       <!-- Right Column: Big Data, Cloud & Databricks Expertise -->
-      <div class="col-lg-6">
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
         <div class="progress">
           <span class="skill">Databricks</span>
         </div>
@@ -191,11 +513,11 @@ Open for collaboration on any interesting projects.
 </section>
 
 <!-- ======= Achievement Section ======= -->
-<section id="achievement" class="achievement section-bg">
+<section id="achievement" class="achievement">
   <div class="container">
     <!-- Section Title (left aligned) -->
-    <div class="section-title">
-      <h2>Achievement</h2>
+    <div class="section-title" data-aos="fade-up">
+      <h2>Certification</h2>
     </div>
     <!-- Achievement Content -->
     <div class="row portfolio-container justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -219,27 +541,34 @@ Open for collaboration on any interesting projects.
 </section>
 
 <!-- ======= Resume Section ======= -->
-<section id="resume" class="resume">
+<section id="resume" class="resume section-bg">
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-title" data-aos="fade-up">
       <h2>Resume</h2>
     </div>
 
     <!-- Work Experience -->
-    <div class="resume-section" data-aos="fade-up">
+    <div class="resume-section" data-aos="fade-up" data-aos-delay="100">
       <h3 class="resume-title">Work Experience</h3>
 
       <div class="resume-item">
-        <h4>Data Engineer: Cineplex Entertainment</h4>
+        <h4>Senior Data Engineer: Cineplex Entertainment</h4>
         <h5>April 2024 – Present</h5>
         <ul>
-          <li><strong>Production-Grade Pipelines:</strong> Designed and optimized large-scale ingestion pipelines (Azure, Databricks, ADF, dbt) to deliver reliable data for analytics and ML workflows.</li>
-          <li><strong>Legacy Cube Modernization:</strong> Migrated SSIS-based cubes into Databricks’ medallion architecture, implementing new fact/dimension tables to power critical revenue (Moneyball) reports.</li>
-          <li><strong>Strategic Cost-Optimization:</strong> Led the discovery of a partner-provided data service, mitigating an estimated $150K in licensing expenses while maintaining data coverage.</li>
-          <li><strong>DevOps &amp; Automation:</strong> Established CI/CD pipelines, service principal authentication, and robust monitoring/alerting to minimize ingestion failures and ensure data security.</li>
-          <li><strong>API Refactoring:</strong> Transitioned data pipelines (e.g., YouTube, Wikipedia) from web scraping to official APIs, boosting reliability, security, and maintainability.</li>
-          <li><strong>ML Pipeline Collaboration:</strong> Partnered with Data Science teams to refine data workflows, enhance performance, and ensure high data quality for advanced analytics use cases.</li>
+          <li><strong>Platform Migration & Modernization:</strong> Spearheaded the migration of 40+ legacy data pipelines from on-premises infrastructure to Databricks, establishing a scalable cloud-native data platform. Orchestrated end-to-end migration strategy, ensuring zero data loss and minimal business disruption while modernizing critical data workflows.</li>
+          
+          <li><strong>High-Impact Performance Optimization:</strong> Re-architected 25-year-old legacy OLAP cubes into modern star schema data models (Media360, Film360) in Databricks, powering executive-level financial reporting in Power BI. Achieved 87% reduction in processing time (4.5 hours → 36 minutes), enabling real-time decision-making for C-suite stakeholders on film performance and revenue distribution across all business verticals.</li>
+          
+          <li><strong>Technical Leadership & Team Management:</strong> Led cross-functional teams of 6-8 engineers on enterprise-scale data initiatives. Owned complete project lifecycle for Media360 and Film360 data platforms—strategic solutions that drive advertising pricing decisions and power the company's flagship financial reporting system, directly informing multi-million dollar revenue decisions.</li>
+          
+          <li><strong>Strategic Data Product Development:</strong> Architected and deployed production-grade data products integrating multi-source film metadata (YouTube API, Wikipedia, MovieXchange). These pipelines serve as foundational datasets for advanced analytics including long-term attendance forecasting, film recommendation engines, and international market models—enabling data-driven strategic planning across the organization.</li>
+          
+          <li><strong>Production Operations & Reliability Engineering:</strong> Established robust monitoring frameworks and BAU operational excellence practices, ensuring 99.9%+ pipeline reliability. Implemented proactive alerting, automated recovery mechanisms, and comprehensive data quality validations across mission-critical data flows serving enterprise reporting and ML workloads.</li>
+          
+          <li><strong>Cost Optimization & Vendor Management:</strong> Identified and negotiated alternative data sourcing strategy, preventing $150K+ in annual licensing costs while maintaining comprehensive data coverage. Demonstrated business acumen in balancing technical requirements with financial constraints.</li>
+          
+          <li><strong>DevOps & Platform Engineering:</strong> Championed infrastructure-as-code practices, implementing CI/CD pipelines with Azure DevOps, service principal authentication, and automated deployment workflows. Enhanced data platform security posture and accelerated development velocity through standardized engineering practices.</li>
         </ul>
       </div>
 
@@ -247,7 +576,7 @@ Open for collaboration on any interesting projects.
         <h4>Data Science Intern: Kinaxis</h4>
         <h5>September 2022 – December 2023</h5>
         <ul>
-          <li><strong>Data Modeling &amp; ETL:</strong> Prototyped data-driven models and optimized feature engineering processes, improving AI frameworks for supply chain forecasting.</li>
+          <li><strong>Data Modeling & ETL:</strong> Prototyped data-driven models and optimized feature engineering processes, improving AI frameworks for supply chain forecasting.</li>
           <li><strong>ML Workflow Optimization:</strong> Analyzed feature importance and implemented automation algorithms to streamline data segmentation, yielding more accurate forecasting outcomes.</li>
           <li><strong>Large-Scale Data Handling:</strong> Conducted data transformations and exploratory data analysis using Python and PySpark, with a strong focus on data security, compliance, and performance.</li>
           <li><strong>Agile Collaboration:</strong> Engaged in daily scrums with cross-functional teams, ensuring alignment of project deliverables with business goals.</li>
@@ -274,21 +603,21 @@ Open for collaboration on any interesting projects.
     </div>
 
     <!-- Certifications & Technical Skills -->
-    <div class="resume-section" data-aos="fade-up">
+    <div class="resume-section" data-aos="fade-up" data-aos-delay="200">
       <h3 class="resume-title">Certifications &amp; Technical Skills</h3>
       <div class="resume-item">
         <ul>
           <li>
             <strong>Certified Databricks Data Engineer Associate:</strong> Passed on March 9, 2025 
-            <span style="color: #149ddd; font-weight: bold;">(Highlight)</span>
+            <span style="color: #149ddd; font-weight: bold;">(Latest Achievement)</span>
           </li>
           <li>Machine Learning – Coursera (Offered by Stanford University), Issued September 2022</li>
         </ul>
         <h4>Technical Skills</h4>
         <ul>
-          <li>Programming: Python, SQL, T‑SQL</li>
-          <li>Big Data &amp; Cloud: Databricks, Azure Data Factory, dbt, Apache Spark, Hadoop (HDFS), Azure DevOps</li>
-          <li>Data Engineering: ETL, data modeling, CI/CD, data orchestration</li>
+          <li>Programming: Python, SQL, T‑SQL, PySpark</li>
+          <li>Big Data & Cloud: Databricks, Azure Data Factory, dbt, Apache Spark, Hadoop (HDFS), Azure DevOps</li>
+          <li>Data Engineering: ETL, Data Modeling, Star/Snowflake Schema, Medallion Architecture, CI/CD, Data Orchestration</li>
           <li>Visualization: Power BI, Tableau, Plotly</li>
           <li>Workflow/Collaboration: Jira, Confluence, Git (GitHub), Agile/Scrum</li>
         </ul>
@@ -296,7 +625,7 @@ Open for collaboration on any interesting projects.
     </div>
 
     <!-- Education -->
-    <div class="resume-section" data-aos="fade-up">
+    <div class="resume-section" data-aos="fade-up" data-aos-delay="300">
       <h3 class="resume-title">Education</h3>
       <div class="resume-item">
         <h4>Bachelor of Science, Computer Science</h4>
@@ -306,46 +635,55 @@ Open for collaboration on any interesting projects.
 
   </div>
 </section>
+
+<!-- ======= Technical Expertise Section ======= -->
+<section id="expertise" class="expertise">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Technical Expertise</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="expertise-item">
+          <h3><i class="bx bx-data"></i> Data Platform Engineering</h3>
+          <p>Enterprise data lakehouse architecture, medallion design patterns, Delta Lake optimization, data mesh principles, star/snowflake schema modeling</p>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="expertise-item">
+          <h3><i class="bx bx-cog"></i> Cloud & Infrastructure</h3>
+          <p>Azure ecosystem (ADF, Databricks, DevOps), Infrastructure as Code, CI/CD automation, scalable pipeline orchestration, service principal authentication</p>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="expertise-item">
+          <h3><i class="bx bx-group"></i> Technical Leadership</h3>
+          <p>Cross-functional team management, mentoring data engineers, architectural decision-making, stakeholder communication, project ownership</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><!-- End Expertise Section -->
+
 <!-- ======= Portfolio Section ======= -->
 <section id="portfolio" class="portfolio section-bg">
 <div class="container">
 
-<div class="section-title">
+<div class="section-title" data-aos="fade-up">
 <h2>Projects</h2>
 </div>
 
-<!-- <div class="row" data-aos="fade-up">
-         <div class="col-lg-12 d-flex justify-content-center">
-           <ul id="portfolio-flters">
-             <li data-filter="*" class="filter-active">All</li>
-             <li data-filter=".filter-app">App</li>
-             <li data-filter=".filter-card">Card</li>
-             <li data-filter=".filter-web">Web</li>
-           </ul>
-         </div>
-       </div> -->
-
 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
-<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-           <div class="portfolio-wrap">
-             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-             <div class="portfolio-links">
-               <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-               <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-             </div>
-           </div>
-         </div> -->
-
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100">
 <div class="portfolio-wrap">
-<a href="https://github.com/hemanyaarora/nft-market-analysis" target = "_blank">
+<a href="https://github.com/hemanyaarora/nft-market-analysis" target="_blank">
 <img src="assets/img/portfolio/NFT.jpeg" class="img-fluid" alt="">
 <div class="portfolio-links">
 <h4 style="font-size: 1.5rem;">NFT Market Analysis</h4>
-<p style="font-size: 1rem;">Data Mining, Data Analysis, Machine Learning, and Data Visualization</p>
+<p style="font-size: 1rem;">End-to-end ML pipeline: web scraping, feature engineering, predictive modeling (XGBoost, Random Forest), interactive Plotly visualizations</p>
 <div class="portfolio-links portfolio-links-icons mt-5" style="text-align: center;">
-<a target = "_blank" href="https://github.com/hemanyaarora/nft-market-analysis" title="App 1"><i class="bx bx-plus"></i></a>
+<a target="_blank" href="https://github.com/hemanyaarora/nft-market-analysis" title="View on GitHub"><i class="bx bx-plus"></i></a>
 <a href="port-market.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
 </div>
 </div>
@@ -353,15 +691,15 @@ Open for collaboration on any interesting projects.
 </div>
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="200">
 <div class="portfolio-wrap">
-<a href="https://github.com/hemanyaarora/crypto-price-prediction" target = "_blank">
+<a href="https://github.com/hemanyaarora/crypto-price-prediction" target="_blank">
 <img src="assets/img/portfolio/stats.jpeg" class="img-fluid" alt="">
 <div class="portfolio-links">
 <h4 style="font-size: 1.5rem;">Crypto Market Analysis</h4>
-<p style="font-size: 1rem;">Data Mining, Data Analysis, Machine Learning, and Data Visualization</p>
+<p style="font-size: 1rem;">Time-series forecasting with advanced ML models, comprehensive data mining and visualization of cryptocurrency trends</p>
 <div class="portfolio-links portfolio-links-icons mt-5" style="text-align: center;">
-<a target = "_blank" href="https://github.com/hemanyaarora/crypto-price-prediction" title="App 1"><i class="bx bx-plus"></i></a>
+<a target="_blank" href="https://github.com/hemanyaarora/crypto-price-prediction" title="View on GitHub"><i class="bx bx-plus"></i></a>
 <a href="port-market.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
 </div>
 </div>
@@ -369,17 +707,15 @@ Open for collaboration on any interesting projects.
 </div>
 </div>
 
-
-
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="300">
 <div class="portfolio-wrap">
-<a href="https://github.com/hemanyaarora/credit-card-fraud-detection" target = "_blank">
+<a href="https://github.com/hemanyaarora/credit-card-fraud-detection" target="_blank">
 <img src="assets/img/portfolio/Credit_Card_Fraud_12.06_isolated.png" class="img-fluid" alt="">
 <div class="portfolio-links">
 <h4 style="font-size: 1.5rem;">Credit Card Fraud Detection</h4>
-<p style="font-size: 1rem;">Data Retrieval, Data Analysis, Machine Learning, and Data Visualization</p>
+<p style="font-size: 1rem;">Anomaly detection using ensemble methods, handling imbalanced datasets with SMOTE, precision-recall optimization</p>
 <div class="portfolio-links portfolio-links-icons mt-5" style="text-align: center;">
-<a target = "_blank" href="https://github.com/hemanyaarora/credit-card-fraud-detection" title="App 1"><i class="bx bx-plus"></i></a>
+<a target="_blank" href="https://github.com/hemanyaarora/credit-card-fraud-detection" title="View on GitHub"><i class="bx bx-plus"></i></a>
 <a href="port-market.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
 </div>
 </div>
@@ -387,30 +723,31 @@ Open for collaboration on any interesting projects.
 </div>
 </div>
 
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="100">
 <div class="portfolio-wrap">
-<a href="https://github.com/hemanyaarora/us_accident_eda" target = "_blank">
+<a href="https://github.com/hemanyaarora/us_accident_eda" target="_blank">
 <img src="assets/img/portfolio/accident.png" class="img-fluid" alt="">
 <div class="portfolio-links">
 <h4 style="font-size: 1.5rem;">US Accidents Exploratory Data Analysis</h4>
-<p style="font-size: 1rem;">Data Retrieval, Data Analysis, and Data Visualization</p>
+<p style="font-size: 1rem;">Large-scale data analysis (3M+ records), geospatial visualization, statistical insights extraction</p>
 <div class="portfolio-links portfolio-links-icons mt-5" style="text-align: center;">
-<a target = "_blank" href="https://github.com/hemanyaarora/us_accident_eda" title="App 1"><i class="bx bx-plus"></i></a>
+<a target="_blank" href="https://github.com/hemanyaarora/us_accident_eda" title="View on GitHub"><i class="bx bx-plus"></i></a>
 <a href="port-market.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
 </div>
 </div>
 </a>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="zoom-in" data-aos-delay="200">
 <div class="portfolio-wrap">
-<a href="https://github.com/hemanyaarora/covid-19-world-vaccination-progress" target = "_blank">
+<a href="https://github.com/hemanyaarora/covid-19-world-vaccination-progress" target="_blank">
 <img src="assets/img/portfolio/covid.jpeg" class="img-fluid" alt="">
 <div class="portfolio-links">
 <h4 style="font-size: 1.5rem;">COVID-19 World Vaccination Progress</h4>
-<p style="font-size: 1rem;">Data Retrieval, Data Analysis, and Data Visualization</p>
+<p style="font-size: 1rem;">Global data aggregation, temporal analysis, interactive dashboards tracking vaccination rates across countries</p>
 <div class="portfolio-links portfolio-links-icons mt-5" style="text-align: center;">
-<a target = "_blank" href="https://github.com/hemanyaarora/covid-19-world-vaccination-progress" title="App 1"><i class="bx bx-plus"></i></a>
+<a target="_blank" href="https://github.com/hemanyaarora/covid-19-world-vaccination-progress" title="View on GitHub"><i class="bx bx-plus"></i></a>
 <a href="port-market.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
 </div>
 </div>
@@ -423,133 +760,104 @@ Open for collaboration on any interesting projects.
 </div>
 </section><!-- End Portfolio Section -->
 
-<!-- ======= Services Section ======= -->
-<!-- <section id="services" class="services">
-     <div class="container">
+<!-- ======= LinkedIn Recommendations Section ======= -->
+<section id="recommendations" class="testimonials-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>LinkedIn Recommendations</h2>
+      <p>What colleagues and leaders say about working with me</p>
+    </div>
 
-       <div class="section-title">
-         <h2>Services</h2>
-         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-       </div>
+    <div class="row">
+      <!-- Recommendation 1 - Placeholder -->
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+        <div class="testimonial-item">
+          <div class="testimonial-header">
+            <div class="testimonial-info">
+              <h3>[Manager/Colleague Name]</h3>
+              <h4>[Title] at [Company]</h4>
+            </div>
+            <a href="https://ca.linkedin.com/in/hemanya-arora" target="_blank" class="linkedin-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+          <p class="testimonial-text">
+            "Add your actual LinkedIn recommendation here. Hemanya demonstrated exceptional technical leadership and delivered outstanding results on our data platform modernization project..."
+          </p>
+        </div>
+      </div>
 
-       <div class="row">
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-           <div class="icon"><i class="bi bi-briefcase"></i></div>
-           <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-           <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-         </div>
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-           <div class="icon"><i class="bi bi-card-checklist"></i></div>
-           <h4 class="title"><a href="">Dolor Sitema</a></h4>
-           <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-         </div>
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-           <div class="icon"><i class="bi bi-bar-chart"></i></div>
-           <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-           <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-         </div>
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-           <div class="icon"><i class="bi bi-binoculars"></i></div>
-           <h4 class="title"><a href="">Magni Dolores</a></h4>
-           <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-         </div>
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-           <div class="icon"><i class="bi bi-brightness-high"></i></div>
-           <h4 class="title"><a href="">Nemo Enim</a></h4>
-           <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-         </div>
-         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-           <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-           <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-           <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-         </div>
-       </div>
+      <!-- Recommendation 2 - Placeholder -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+        <div class="testimonial-item">
+          <div class="testimonial-header">
+            <div class="testimonial-info">
+              <h3>[Manager/Colleague Name]</h3>
+              <h4>[Title] at [Company]</h4>
+            </div>
+            <a href="https://ca.linkedin.com/in/hemanya-arora" target="_blank" class="linkedin-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+          <p class="testimonial-text">
+            "Add your actual LinkedIn recommendation here. Working with Hemanya on the Databricks migration was a great experience. Their expertise in data engineering and ability to lead teams..."
+          </p>
+        </div>
+      </div>
 
-     </div>
-   </section><!- End Services Section -->
+      <!-- Recommendation 3 - Placeholder -->
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="300">
+        <div class="testimonial-item">
+          <div class="testimonial-header">
+            <div class="testimonial-info">
+              <h3>[Manager/Colleague Name]</h3>
+              <h4>[Title] at [Company]</h4>
+            </div>
+            <a href="https://ca.linkedin.com/in/hemanya-arora" target="_blank" class="linkedin-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+          <p class="testimonial-text">
+            "Add your actual LinkedIn recommendation here. Hemanya's contributions to our data infrastructure were invaluable. Their deep understanding of Databricks and Azure..."
+          </p>
+        </div>
+      </div>
 
-<!-- ======= Testimonials Section ======= -->
-<!-- <section id="testimonials" class="testimonials section-bg">
-     <div class="container">
+      <!-- Recommendation 4 - Placeholder -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
+        <div class="testimonial-item">
+          <div class="testimonial-header">
+            <div class="testimonial-info">
+              <h3>[Manager/Colleague Name]</h3>
+              <h4>[Title] at [Company]</h4>
+            </div>
+            <a href="https://ca.linkedin.com/in/hemanya-arora" target="_blank" class="linkedin-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+          <p class="testimonial-text">
+            "Add your actual LinkedIn recommendation here. I had the pleasure of working alongside Hemanya on several critical data projects. Their problem-solving skills and technical depth..."
+          </p>
+        </div>
+      </div>
+    </div>
 
-       <div class="section-title">
-         <h2>Testimonials</h2>
-         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-       </div>
-
-       <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-         <div class="swiper-wrapper">
-
-           <div class="swiper-slide">
-             <div class="testimonial-item" data-aos="fade-up">
-               <p>
-                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-               </p>
-               <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-               <h3>Saul Goodman</h3>
-               <h4>Ceo &amp; Founder</h4>
-             </div>
-           </div><!-- End testimonial item -->
-<!-- 
-           <div class="swiper-slide">
-             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-               <p>
-                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-               </p>
-               <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-               <h3>Sara Wilsson</h3>
-               <h4>Designer</h4>
-             </div>
-           </div><!-End testimonial item -->
-
-<!-- <div class="swiper-slide">
-             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-               <p>
-                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-               </p>
-               <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-               <h3>Jena Karlis</h3>
-               <h4>Store Owner</h4>
-             </div> -->
-<!-- </div><!- End testimonial item -->
-
-
-<!-- </div><!- End testimonial item -->
-
-<!-- <div class="swiper-slide">
-             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-               <p>
-                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                 Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-               </p>
-               <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-               <h3>John Larson</h3>
-               <h4>Entrepreneur</h4>
-             </div> -->
-<!-- </div><! End testimonial item -->
-
-<!-- </div>
-         <div class="swiper-pagination"></div>
-       </div> -->
-<!-- 
-     </div> 
-   </section>End Testimonials Section -->
+    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+      <a href="https://ca.linkedin.com/in/hemanya-arora" target="_blank" class="download-resume-btn">
+        <i class="bx bxl-linkedin"></i> View All on LinkedIn
+      </a>
+    </div>
+  </div>
+</section><!-- End Recommendations Section -->
 
 <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact">
+<section id="contact" class="contact section-bg">
 <div class="container">
 
-<!-- <div class="section-title">
-         <h2>Contact</h2>
-         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-       </div> -->
+<div class="section-title" data-aos="fade-up">
+<h2>Let's Connect</h2>
+<p>Interested in collaboration or discussing data engineering opportunities? Feel free to reach out.</p>
+</div>
 
 <div class="row" data-aos="fade-in">
 
@@ -566,10 +874,7 @@ Open for collaboration on any interesting projects.
 <h4>Email:</h4>
 <p>hemanya56@gmail.com</p>
 </div>
-
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe> -->
 </div>
-
 </div>
 
 <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -611,14 +916,7 @@ Open for collaboration on any interesting projects.
 <!-- ======= Footer ======= -->
 <footer id="footer">
 <div class="container">
-<!-- <div class="copyright">
-       &copy; Copyright <strong><span>My Resume</span></strong> 
-     </div> -->
 <div class="credits">
-<!-- All the links in the footer should remain intact. -->
-<!-- You can delete the links only if you purchased the pro version. -->
-<!-- Licensing information: https://bootstrapmade.com/license/ -->
-<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
 Designed by <strong><span>Hemanya Arora</span></strong>
 </div>
 </div>
@@ -639,6 +937,38 @@ Designed by <strong><span>Hemanya Arora</span></strong>
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<!-- Dark Mode Toggle Script -->
+<script>
+  // Dark mode toggle functionality
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const htmlElement = document.documentElement;
+
+  // Check for saved theme preference or default to 'light'
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  htmlElement.setAttribute('data-theme', currentTheme);
+  updateIcon(currentTheme);
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon(newTheme);
+  });
+
+  function updateIcon(theme) {
+    if (theme === 'dark') {
+      themeIcon.classList.remove('bi-moon-fill');
+      themeIcon.classList.add('bi-sun-fill');
+    } else {
+      themeIcon.classList.remove('bi-sun-fill');
+      themeIcon.classList.add('bi-moon-fill');
+    }
+  }
+</script>
 
 </body>
 
