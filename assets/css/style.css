@@ -92,10 +92,28 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
+[data-theme="dark"] .section-title p {
+  color: var(--text-secondary);
+}
+
 [data-theme="dark"] .about .content h3,
 [data-theme="dark"] .resume .resume-title,
 [data-theme="dark"] .resume .resume-item h4 {
   color: var(--text-primary);
+}
+
+[data-theme="dark"] .resume .resume-item h5 {
+  background: #2a3f5f;
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .resume .resume-item {
+  border-left-color: #149ddd;
+}
+
+[data-theme="dark"] .resume .resume-item::before {
+  background: var(--bg-primary);
+  border-color: #149ddd;
 }
 
 [data-theme="dark"] .contact .info,
@@ -112,8 +130,40 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
+[data-theme="dark"] .contact .info i {
+  background: #1a3a52;
+  color: #149ddd;
+}
+
+/* CRITICAL FIX: Form inputs in dark mode */
+[data-theme="dark"] .php-email-form input,
+[data-theme="dark"] .php-email-form textarea {
+  background: #1a1a1a;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+[data-theme="dark"] .php-email-form input::placeholder,
+[data-theme="dark"] .php-email-form textarea::placeholder {
+  color: #888;
+}
+
+[data-theme="dark"] .php-email-form input:focus,
+[data-theme="dark"] .php-email-form textarea:focus {
+  border-color: #149ddd;
+  background: #222;
+}
+
+[data-theme="dark"] .php-email-form label {
+  color: var(--text-primary);
+}
+
 [data-theme="dark"] .portfolio .portfolio-wrap::before {
   background: rgba(26, 26, 26, 0.9);
+}
+
+[data-theme="dark"] .portfolio .portfolio-wrap .portfolio-links a {
+  color: #e0e0e0;
 }
 
 [data-theme="dark"] .facts .count-box {
@@ -128,23 +178,39 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="dark"] .expertise-item {
   background: var(--bg-secondary);
   color: var(--text-primary);
+  border: 1px solid #333;
+}
+
+[data-theme="dark"] .expertise-item h3 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .expertise-item p {
+  color: var(--text-secondary);
 }
 
 [data-theme="dark"] .testimonial-item {
   background: var(--bg-secondary);
+  border: 1px solid #333;
 }
 
 [data-theme="dark"] .testimonial-item h3 {
   color: var(--text-primary);
 }
 
-[data-theme="dark"] .testimonial-item p {
+[data-theme="dark"] .testimonial-item h4 {
+  color: #149ddd;
+}
+
+[data-theme="dark"] .testimonial-item p,
+[data-theme="dark"] .testimonial-text {
   background: var(--bg-primary);
   color: var(--text-secondary);
 }
 
 [data-theme="dark"] .impact .count-box {
   background: var(--bg-secondary);
+  border: 1px solid #333;
 }
 
 [data-theme="dark"] .impact .count-box span {
@@ -155,11 +221,37 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
 }
 
-[data-theme="dark"] .php-email-form input,
-[data-theme="dark"] .php-email-form textarea {
-  background: var(--bg-primary);
+[data-theme="dark"] .skills .progress .skill {
   color: var(--text-primary);
-  border: 1px solid #444;
+}
+
+[data-theme="dark"] .skills .progress-bar-wrap {
+  background: #2a2a2a;
+}
+
+/* Links in dark mode */
+[data-theme="dark"] a {
+  color: #37b3ed;
+}
+
+[data-theme="dark"] a:hover {
+  color: #149ddd;
+}
+
+/* About section links */
+[data-theme="dark"] .about .content ul a {
+  color: #37b3ed;
+}
+
+/* Download button in dark mode */
+[data-theme="dark"] .download-resume-btn {
+  background: #149ddd;
+  color: #fff;
+}
+
+[data-theme="dark"] .download-resume-btn:hover {
+  background: #37b3ed;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
