@@ -548,4 +548,25 @@ Designed by <strong><span>Hemanya Arora</span></strong>
   updateIcon(currentTheme);
 
   themeToggle.addEventListener('click', () => {
-    const currentTheme = htmlElement.getAttrib
+    const currentTheme = htmlElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon(newTheme);
+  });
+
+  function updateIcon(theme) {
+    if (theme === 'dark') {
+      themeIcon.classList.remove('bi-moon-fill');
+      themeIcon.classList.add('bi-sun-fill');
+    } else {
+      themeIcon.classList.remove('bi-sun-fill');
+      themeIcon.classList.add('bi-moon-fill');
+    }
+  }
+</script>
+
+</body>
+
+</html>
